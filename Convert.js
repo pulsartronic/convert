@@ -48,7 +48,7 @@ Convert.B64.toAB = function(string, url = false) {
 };
 
 Convert.B16.toAB = function(string) {
-	let str = (0 == (this.length % 2)) ? string : ("0" + string);
+	let str = (0 == (string.length % 2)) ? string : ("0" + string);
 	let arrayBuffer = new ArrayBuffer(str.length / 2);
 	let uia = new Uint8Array(arrayBuffer);
 	for (let j = 0; j < uia.length; j++) {
